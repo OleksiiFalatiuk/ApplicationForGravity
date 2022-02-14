@@ -1,7 +1,8 @@
-package com.example.applicationforgravity.data
+package com.example.applicationforgravity.data.remote
 
 import com.example.applicationforgravity.model.LinkAndHome
 
-interface LinkRepository {
+interface RemoteDataSource {
+
     suspend fun loadLinkAndHome(): LinkAndHome
 }
