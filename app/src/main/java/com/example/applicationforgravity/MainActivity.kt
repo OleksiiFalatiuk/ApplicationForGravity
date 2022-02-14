@@ -2,7 +2,7 @@ package com.example.applicationforgravity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.applicationforgravity.loading.FragmentWithLoading
+import com.example.applicationforgravity.progress.FragmentWithLoading
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
