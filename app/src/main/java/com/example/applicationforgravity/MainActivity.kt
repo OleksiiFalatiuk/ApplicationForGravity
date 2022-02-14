@@ -2,9 +2,21 @@ package com.example.applicationforgravity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.applicationforgravity.data.LinkRepository
+import com.example.applicationforgravity.data.remote.retrofit.RetrofitDataSource
 import com.example.applicationforgravity.progress.FragmentWithLoading
+import com.example.applicationforgravity.provider.LinkAndHomeProvider
+import com.example.applicationforgravity.provider.NetworkModule
+import com.example.applicationforgravity.repository.LinkAndHomeRepositoryImpl
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), LinkAndHomeProvider {
+
+    private val network = NetworkModule()
+
+    private val remote = RetrofitDataSource(network.api)
+
+    private val repository = LinkAndHomeRepositoryImpl(remote)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -12,7 +24,6 @@ class MainActivity : AppCompatActivity() {
             toFragmentWithLoading()
         }
     }
-
 
 
     private fun toFragmentWithLoading(){
@@ -25,5 +36,8 @@ class MainActivity : AppCompatActivity() {
             .addToBackStack("trans:${FragmentWithLoading::class.java.simpleName}")
             .commit()
     }
+
+    override fun provideLinkAndHome(): LinkRepository = repository
+
 
 }
