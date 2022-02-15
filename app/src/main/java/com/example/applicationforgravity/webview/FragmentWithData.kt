@@ -1,8 +1,6 @@
 package com.example.applicationforgravity.webview
 
-import android.app.Application
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import com.example.applicationforgravity.R
-import com.example.applicationforgravity.data.local.Shared
+import com.example.applicationforgravity.data.local.sharedpreferences.Shared
 import com.example.applicationforgravity.progress.LoadingViewModel
 import com.example.applicationforgravity.progress.LoadingViewModelFactory
 import com.example.applicationforgravity.provider.LinkAndHomeProvider

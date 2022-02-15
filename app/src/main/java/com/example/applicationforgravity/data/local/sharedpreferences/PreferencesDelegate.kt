@@ -1,4 +1,4 @@
-package com.example.applicationforgravity.data.local
+package com.example.applicationforgravity.data.local.sharedpreferences
 
 import android.content.SharedPreferences
 import kotlin.properties.ReadWriteProperty
