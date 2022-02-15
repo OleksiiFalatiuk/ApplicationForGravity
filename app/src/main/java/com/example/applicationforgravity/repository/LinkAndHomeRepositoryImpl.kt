@@ -1,6 +1,5 @@
 package com.example.applicationforgravity.repository
 
-import android.util.Log
 import com.example.applicationforgravity.data.LinkRepository
 import com.example.applicationforgravity.data.local.LocalDataSource
 import com.example.applicationforgravity.data.remote.RemoteDataSource
